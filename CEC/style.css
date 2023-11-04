@@ -1,12 +1,66 @@
-.box{
-    width: 100px;
-    height: 200px;
+.container{
+    display: flex;
+    column-gap:20px ;
+}
+.box1{
+    width: 40px;
+    height: 280px;
     border: 2px solid black;
     padding:10px;
-    background-color: aqua;
+    background-color:lightblue;
 }
 
-.selector-for-some-widget {
-    box-sizing: content-box;
-    
-  }
+ 
+  .box2{
+    width: 400px;
+    height: 280px;
+    border: 2px solid black;
+    padding:10px;
+    background-color:lavenderblush;
+}
+form{
+    width:90%;
+    max-width:600px;
+}
+.input-group{
+    margin-bottom: 10px;
+    position:relative;
+}
+input, textarea{
+    height: 0;
+    width: 100%;
+    padding:16px;
+    outline:0;
+    border:1px solid #fff;
+    color:black;
+    background:white ;
+    font-size: 12px;
+}
+label{
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    padding:10px;
+    color:Black;
+    cursor: text;
+}
+button{
+    padding:10px;
+    color:Black;
+    outline: none;
+    background: orange;
+    border:1px solid black;
+    width: 110%;
+    cursor:pointer;
+}
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+    top: -35px;
+    font-size: 14px;
+}
+
+
+  
