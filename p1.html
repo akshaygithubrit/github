@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: light coral
+            }
+            h2{
+                color:rgb(145,40,1);
+                text-align: center;
+            }
+            h3{
+                color:violet;
+                text-align: center;
+            }
+            p{
+                font-size:medium;
+                font-style:italic;
+                color:black
+            }
+            .footer
+            {
+             position:fixed;
+            left:0px;
+            right:0px;
+            bottom:0px;
+            text-align:center;
+            padding:2px;
+            background-color: aqua;
+           color:white;
+                
+         }
+            </style>
+            </head>
+            <body>
+                <center>
+                    <h2><b>Current date and time</b></h2>
+                    <p id="date"></p>
+                    <h2>Calculate age from dob<br><br></h2>
+                    <b>Enter the date of birth:<input type="date" id="DOB"></b>
+                    <br><br>
+                    <input type="submit" value="Calculate Age" onclick="ageCalculator()"><br><br>
+                    <h3 id="result"></h3>
+                </center>
+                <div class ="footer">
+                    <p>This page is created by &#169 4CB21CS011 </p>
+
+                </div>
+                <script>
+                    let d=new Date();
+                    document.getElementById("date").innerHTML=d;
+                    function ageCalculator()
+                    {
+                        var userinput=document.getElementById("DOB").value;
+                        var dob=new Date(userinput)
+                        if (userinput ==null || userinput ==""){
+                        alert("Choose a date please!");
+                        }
+                        else
+                        {
+                            var diff = Date.now() - dob;
+                            console.log(diff);
+                            var age_date=new Date(diff);
+                            console.log(age_date);
+                            var year=age_date.getUTCFullYear();
+                            console.log(year);
+                            var age=Math.abs(year-1970);
+                            return document.getElementById("result").innerHTML="age is:"+age+"years.";
+                        }
+                    }
+                </script>
+                </body>
+                </html>
+    
+
+        
+    </body>
+</html>
